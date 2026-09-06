@@ -11,7 +11,7 @@
   <header class="header">
     <a class="brand" href="#home"><b>赵爽</b><span>Zhao Shuang</span></a>
     <nav><a href="#about">简介</a><a href="#research">科研</a><a href="#projects">项目与会议</a><a href="#honors">荣誉</a><a href="#service">服务与实践</a></nav>
-    <button onclick="window.print()">打印简历</button>
+    <div class="header-actions"><button onclick="window.print()">打印简历</button><button id="admin-open">管理内容</button></div>
   </header>
   <main>
     <section class="hero" id="home">
@@ -28,5 +28,8 @@
     <section class="section split" id="service"><div><p class="kicker">SERVICE & PRACTICE</p><h2>社会服务与综合实践</h2><p class="muted">持续参与校内外学术会议、中俄文化交流活动及校园文体活动，在服务中拓展学术视野、提升协作能力。</p></div><ul><li><b>中俄文化交流</b><span>“友谊的见证”专题展览语料翻译；中俄友好语言对话会随行翻译</span></li><li><b>会议志愿服务</b><span>嘉宾接待、会务筹备、物料发放与现场保障</span></li><li><b>学生工作</b><span>班级学习事务沟通协调、研究中心材料审核</span></li><li><b>文体活动</b><span>代表外国语学院参加校园冬季跑与乒乓球比赛</span></li></ul></section>
   </main>
   <footer><b>赵爽 · Zhao Shuang</b><span>中国人民大学外国语学院</span><small>最后更新于 2026 年 9 月</small></footer>
+  <div class="admin-bar" id="admin-bar" hidden><b>管理模式</b><span>直接点击页面文字进行修改</span><button id="admin-cancel">退出</button><button id="admin-save">保存到 GitHub</button></div>
+  <dialog id="admin-dialog"><form method="dialog" id="admin-form"><button class="dialog-close" value="cancel" aria-label="关闭">×</button><p class="kicker">OWNER ACCESS</p><h2>进入管理模式</h2><p class="dialog-note">令牌仅保存在当前页面内存中，刷新或关闭页面后立即清除。</p><div class="permission-note"><b>令牌最低配置</b><span>Resource owner：superzs0513-droid</span><span>Repository access：zhaoshuang-cv</span><span>Repository permissions：Contents → Read and write</span></div><label>GitHub 令牌<input id="admin-token" type="password" required autocomplete="off" placeholder="github_pat_…"></label><label>仓库<input id="admin-repo" required value="superzs0513-droid/zhaoshuang-cv"></label><label>分支<input id="admin-branch" required value="main"></label><p id="admin-message" role="status"></p><div class="dialog-actions"><button value="cancel">取消</button><button class="primary" id="admin-enter" value="default">验证并进入</button></div></form></dialog>
+  <script src="admin.js"></script>
 </body>
 </html>
