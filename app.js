@@ -6,6 +6,7 @@
     panels.forEach(panel => panel.hidden = panel.dataset.view !== id);
     buttons.forEach(button => button.setAttribute('aria-selected', String(button.dataset.viewTarget === id)));
     if (updateHash) history.replaceState(null, '', `#${id}`);
+    document.title = id === 'home' ? '赵爽 | 俄罗斯文学与跨文化研究' : `${buttons.find(button => button.dataset.viewTarget === id)?.textContent.trim() || '个人简历'} | 赵爽`;
     window.scrollTo({top: 0, behavior: 'smooth'});
   }
   buttons.forEach(button => button.addEventListener('click', () => show(button.dataset.viewTarget)));
